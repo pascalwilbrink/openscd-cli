@@ -1,0 +1,45 @@
+{
+  "name": "@openscd/openscd-cli",
+  "version": "0.0.1",
+  "description": "OpenSCD Cli Tool",
+  "main": "dist/index.js",
+  "bin": {
+    "oscd": "./dist/index.js"
+  },
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "create": "npm run build && pm run test",
+    "build": "tsc -p .",
+    "local": "sudo npm i -g && oscd",
+    "refresh": "rm -rf ./node_modules ./package-lock.json && npm i",
+    "test": "jest"
+  },
+  "keywords": [
+    "OpenSCD",
+    "CLI",
+    "Tool"
+  ],
+  "author": "Pascal Wilbrink <pascal.wilbrink@openvalue.nl>",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "change-case": "^4.1.2",
+    "clar": "^0.2.2",
+    "clear": "^0.1.0",
+    "commander": "^9.4.1",
+    "figlet": "^1.5.2",
+    "handlebars": "^4.7.7",
+    "inquirer": "^8.2.5",
+    "ora": "^6.1.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@types/clear": "^0.1.2",
+    "@types/figlet": "^1.5.5",
+    "@types/inquirer": "^9.0.2",
+    "@types/node": "^18.11.4",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4"
+  }
+}

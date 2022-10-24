@@ -1,0 +1,23 @@
+import {
+    css,
+    customElement,
+    html,
+    LitElement,
+    property,
+    TemplateResult,
+} from 'lit-element';
+  
+@customElement('{{ selector }}')
+export class {{className}} extends LitElement {
+    @property({ attribute: false })
+    doc!: XMLDocument;
+
+  
+    render(): TemplateResult {
+      return html``;
+    }
+  
+    static styles = css`
+    `;
+}
+  
